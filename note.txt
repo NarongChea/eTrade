@@ -1,0 +1,17 @@
++ React:
+    - Tailwind CSS : 3.4
+    - JSON-Server 
+        - npm i json-serve
+    - React-Router
+        - npm i react-router-dom
+
+    - Merge command run JSON-server with React:
+        - npm install --save-dev concurrently json-server
+        - in package.json:
+            "scripts": {
+                "dev": "concurrently \"vite\" \"npm run server\"",
+                "server": "json-server --watch db.json",
+                "build": "vite build",
+                "lint": "eslint .",
+                "preview": "vite preview"
+            }
